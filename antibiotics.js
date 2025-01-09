@@ -34,7 +34,7 @@ const cephalosporins = new Antibiotic(
     "Binds to penicillin-binding proteins (PBPs), preventing peptidoglycan cross-linking.",
     "Broad",
     "Both",
-    "Bactericidal",
+    "Bacteriolytic",
     ["Respiratory infections, urinary tract infections, skin infections"],
     ["Extended-spectrum beta-lactamase (ESBL)-producing bacteria"]
 );
@@ -47,7 +47,7 @@ const penicillins = new Antibiotic(
     "Binds to penicillin-binding proteins (PBPs), disrupting peptidoglycan cross-linking.",
     "Broad",
     "Both",
-    "Bactericidal",
+    "Bacteriolytic",
     ["Streptococcal infections, syphilis, skin infections"],
     ["Beta-lactamase-producing bacteria"]
 );
@@ -138,7 +138,7 @@ const glycopeptides = new Antibiotic(
     "Binds to D-Ala-D-Ala terminal of peptidoglycan precursors, blocking polymerization.",
     "Narrow",
     "Gram-positive",
-    "Bactericidal",
+    "Bacteriolytic",
     ["MRSA infections, endocarditis"],
     ["Vancomycin-resistant Enterococci (VRE)"]
 );
@@ -190,7 +190,7 @@ const bacitracin = new Antibiotic(
     "Inhibits bactoprenol phosphate recycling, disrupting peptidoglycan synthesis.",
     "Narrow",
     "Gram-positive",
-    "Bactericidal",
+    "Bacteriolytic",
     ["Skin and wound infections"],
     ["Resistance through efflux pumps"]
 );
@@ -229,7 +229,7 @@ const polymyxins = new Antibiotic(
     "Disrupts bacterial outer membranes by binding to lipopolysaccharides.",
     "Narrow",
     "Gram-negative",
-    "Bactericidal",
+    "Bacteriolytic",
     ["Multidrug-resistant Gram-negative infections"],
     ["Resistance due to altered lipid A"]
 );
@@ -294,7 +294,7 @@ const carbapenems = new Antibiotic(
     "Binds to penicillin-binding proteins (PBPs), preventing peptidoglycan cross-linking, highly resistant to most beta-lactamases.",
     "Broad",
     "Both",
-    "Bactericidal",
+    "Bacteriolytic",
     ["Severe Gram-positive and Gram-negative infections, multidrug-resistant bacterial infections"],
     ["Carbapenem-resistant Enterobacteriaceae (CRE)"]
 );
@@ -307,7 +307,7 @@ const monobactams = new Antibiotic(
     "Binds to penicillin-binding proteins (PBPs), disrupting peptidoglycan cross-linking, effective only against Gram-negative bacteria.",
     "Narrow",
     "Gram-negative",
-    "Bactericidal",
+    "Bacteriolytic",
     ["Serious Gram-negative infections in beta-lactam-allergic patients"],
     ["Resistance due to beta-lactamase production"]
 );
