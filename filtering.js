@@ -39,7 +39,7 @@ function initializeFilters() {
         { key: "subclass", label: "Antibiotic Subclass" },
         { key: "mechanism", label: "Mechanism of Action" },
         { key: "spectrum", label: "Spectrum" },
-        { key: "gramEffect", label: "Gram Stain" },
+        { key: "gramStain", label: "Gram Stain" },
         { key: "activityType", label: "Activity Type" }
     ];
 
@@ -145,14 +145,18 @@ function displayAntibioticDetails(antibiotic) {
         <p><strong>Subclass:</strong> ${antibiotic.subclass || "None"}</p>
         <p><strong>Mechanism:</strong> ${antibiotic.mechanism}</p>
 		<p>${antibiotic.action}</p>
-        <p><strong>Gram Positivity:</strong> ${antibiotic.gramEffect}</p>
+		<p><strong>Description:</strong> ${antibiotic.description || "Missing"}</p>
+        <p><strong>Gram Stain:</strong> ${antibiotic.gramStain}</p>
         <p><strong>Activity Type:</strong> ${antibiotic.activityType}</p>
         <p><strong>Spectrum:</strong> ${antibiotic.spectrum}</p>
         <p><strong>Uses:</strong> ${antibiotic.uses.join(", ")}</p>
         <p><strong>Resistances:</strong> ${antibiotic.resistance.join(", ")}</p>
     `;
+	setCookie("lastDisplayed", antibiotic.name, 7);
 }
 
 // Initialize the filters when the page loads
 document.addEventListener("DOMContentLoaded", initializeFilters);
 displayFilteredAntibiotics(antibiotics);
+let cookie = getCookie("lastDisplayed");
+if (cookie) displayAntibioticDetails(findObjectByName(antibiotics, cookie));
